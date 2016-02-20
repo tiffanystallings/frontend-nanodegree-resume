@@ -12,48 +12,49 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<div class="col-8"><h1 id="name">%data%</h1></div>';
-var HTMLheaderRole = '<div class="first row"><div class="col-4 role"><span>%data%</span></div></div>';
+var HTMLheaderName = '<h1 id="name">%data%</h1>';
+var HTMLheaderRole = '<div class="first row"><div class="col-5 title"><span>%data%</span></div></div>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="blue-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="blue-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="blue-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="blue-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="blue-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="blue-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="blue-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li><span class="blue-text">%contact%</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li><span class="blue-text zocial-call"></span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li><span class="blue-text zocial-email"></span><span class="white-text">%data%</span></li>';
+var HTMLtwitter = '<li><span class="blue-text zocial-twitter"></span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li><span class="blue-text zocial-github"></span><span class="white-text">%data%</span></li>';
+var HTMLblog = '<li><span class="blue-text zocial-wordpress"></span><span class="white-text">%data%</span></li>';
+var HTMLlinkedin = '<li><span class="blue-text zocial-linkedin"></span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li><span class="blue-text">⭆</span><span class="white-text">%data%</span></li>';
 
-var HTMLbioPic = '<div class="mid row"><div class="col-4 left"><img src="%data%" class="biopic"></div></div>';
-var HTMLwelcomeMsg = '<div class="col-8 right"><span class="welcome-message">%data%</span></div>';
+var HTMLbioPic = '<div class="col-3 left"><img src="%data%" class="biopic"></div>';
+var HTMLwelcomeMsg = '<div class="mid row"><div class="col-8 right"><span class="welcome-message">%data%</span></div>';
 
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
+var HTMLskillsStart = '<div class="col-4 right"><h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul></div>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#" class="bold-text">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
+var HTMLworkStart = '<div class="work-entry row"></div>';
+var HTMLworkEmployer = '<div class="col-6 main-left"><a href="#" class="bold-text">%data%';
+var HTMLworkTitle = ' - %data%</a></div>';
+var HTMLworkDates = '<div class="col-6 main-right"><div class="date-text">%data%</div></div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
-var HTMLprojectStart = '<div class="project-entry"></div>';
+var HTMLprojectStart = '<div class="project-entry row"><div class="col-6 main-left"></div><div class="col-6 main-right"></div></div>';
 var HTMLprojectTitle = '<a href="#" class="bold-text">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%" class="project-image">';
+var HTMLprojectImage = '<img src="%data%" class="project-image" alt="Project thumbnail.">';
 
-var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#" class="bold-text">%data%';
+var HTMLschoolStart = '<div class="education-entry row"></div>';
+var HTMLschoolName = '<div class="col-6 main-left"><a href="#" class="bold-text">%data%</div>';
 var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
+var HTMLschoolDates = '<div class="col-6 main-right"><div class="date-text">%data%</div></div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#" class="bold-text">%data%';
+var HTMLonlineTitle = '<div class="col-6 main-left"><a href="#" class="bold-text">%data%</div>';
 var HTMLonlineSchool = ' - %data%</a>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineDates = '<div class="col-6 main-right online-date"><div class="date-text">%data%</div></div>';
+var HTMLonlineURL = '<div class="url row"><a href="#">%data%</a></div>';
 
 //var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
