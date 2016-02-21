@@ -76,7 +76,7 @@ projects.display = function() {
 		for (var i = 0; i < projectsLen; i++) {
 			$('#projects').append(HTMLprojectStart);
 			var imagesLen = projects.projects[i].images.length;
-			for (var x = 0; i < imagesLen; x++) {
+			for (var x = 0; x < imagesLen; x++) {
 				$('.main-left:last').append(HTMLprojectImage.replace('%data%',
 				projects.projects[i].images[x]));
 			}
