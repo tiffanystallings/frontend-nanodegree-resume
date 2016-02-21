@@ -147,9 +147,9 @@ bio.display = function () {
 
 	if (bio.skills !== false) {
 	$('.first').append(HTMLskillsStart);
-
-		for (var skill in bio.skills){
-			$('#skills').append(HTMLskills.replace('%data%', bio.skills[skill]));
+		var len = bio.skills.length;
+		for (var i = 0; i < len; i++){
+			$('#skills').append(HTMLskills.replace('%data%', bio.skills[i]));
 		}
 	}
 };
@@ -189,34 +189,36 @@ var education = {
 };
 
 education.display = function() {
-	for (var school in education.schools) {
+	var schoolsLen = education.schools.length;
+	for (var i = 0; i < schoolsLen; i++) {
 		$('#education').append(HTMLschoolStart);
 		$('.education-entry:last').append(HTMLschoolName.replace('%data%',
-			education.schools[school].name).replace('#',
-			education.schools[school].url));
+			education.schools[i].name).replace('#',
+			education.schools[i].url));
 		$('.main-left:last').append(HTMLschoolDegree.replace('%data%',
-			education.schools[school].degree));
+			education.schools[i].degree));
 		$('.education-entry:last').append(HTMLschoolDates.replace('%data%',
-			education.schools[school].date));
-		var len = education.schools[school].majors.length;
-		for (var i = 0; i < len; i++) {
+			education.schools[i].dates));
+		var majorsLen = education.schools[i].majors.length;
+		for (var x = 0; x < majorsLen; x++) {
 			$('.main-right:last').append(HTMLschoolMajor.replace('%data%',
-				education.schools[school].majors[i]));
+				education.schools[i].majors[x]));
 		}
 		$('.main-right:last').append(HTMLschoolLocation.replace('%data%',
-			education.schools[school].location));
+			education.schools[i].location));
 	}
 	$('#education').append(HTMLonlineClasses);
-	for (var course in education.onlineCourses) {
+	var coursesLen = education.onlineCourses.length;
+	for (var y = 0; y < coursesLen; y++) {
 		$('#education').append(HTMLschoolStart);
 		$('.education-entry:last').append(HTMLonlineTitle.replace('%data%',
-			education.onlineCourses[course].title));
+			education.onlineCourses[y].title));
 		$('.main-left:last').append(HTMLonlineSchool.replace('%data%',
-			education.onlineCourses[course].school));
+			education.onlineCourses[y].school));
 		$('.education-entry:last').append(HTMLonlineDates.replace('%data%',
-			education.onlineCourses[course].date));
+			education.onlineCourses[y].date));
 		$('.education-entry:last').append(HTMLonlineURL.replace('%data%',
-			education.onlineCourses[course].url));
+			education.onlineCourses[y].url));
 	}
 };
 
