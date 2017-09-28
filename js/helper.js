@@ -56,40 +56,8 @@ var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="col-6 main-right online-date"><div class="date-text">%data%</div></div>';
 var HTMLonlineURL = '<div class="url row"><a href="#">%data%</a></div>';
 
-//var internationalizeButton = '<button>Internationalize</button>';
+
 var googleMap = '<div id="map"></div>';
-
-
-/*
-The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
-
-$(document).ready(function() {
-  $('button').click(function() {
-    var iName = inName() || function(){};
-    $('#name').html(iName);
-  });
-});
-
-
-The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
-*/
-clickLocations = [];
-
-function logClicks(x,y) {
-  clickLocations.push(
-    {
-      x: x,
-      y: y
-    }
-  );
-  console.log('x location: ' + x + '; y location: ' + y);
-}
-
-$(document).click(function(loc) {
-  var x = loc.pageX;
-  var y = loc.pageY;
-  logClicks(x, y);
-});
 
 
 
@@ -127,15 +95,20 @@ function initializeMap() {
 
     // initializes an empty array
     var locations = [];
+    var bio = octopus.getBio();
+    var educationData = octopus.getEducation();
+    var work = octopus.getWork();
 
     // adds the single location property from bio to the locations array
     locations.push(bio.contacts.location);
+    console.log(bio.contacts.location);
 
     // iterates through school locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    education.schools.forEach(function(school){
+    console.log(educationData);
+    educationData.schools.forEach(function(school){
       locations.push(school.location);
     });
 
